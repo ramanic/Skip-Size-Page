@@ -14,7 +14,7 @@ import { Button } from "@/components/ui/button";
 import { FeatureBadge } from "./FeatureBadge";
 
 const SelectedSkipBar = () => {
-  const { selectedSkip } = useSkipStore();
+  const { selectedSkip, resetSelection } = useSkipStore();
   const [showPriceBreakdown, setShowPriceBreakdown] = useState(false);
 
   const priceBeforeVat = selectedSkip?.price_before_vat || 0;
@@ -22,13 +22,15 @@ const SelectedSkipBar = () => {
   const vatAmount = (priceBeforeVat * vatRate) / 100;
   const totalPrice = priceBeforeVat + vatAmount;
 
-  const handleBack = () => {};
+  const handleBack = () => {
+    resetSelection();
+  };
   const handleContinue = () => {
     console.log("Continuing with skip:", selectedSkip);
   };
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 border-t border-gray-700/50 bg-gradient-to-t from-gray-950 via-gray-900 to-gray-900/95 backdrop-blur-lg shadow-2xl shadow-black/25">
+    <div className="fixed bottom-0 left-0 right-0 z-50 bg-gray-900 bg-opacity-80 backdrop-blur-xl shadow-2xl shadow-black/25 border-t border-gray-700/50">
       <div className="max-w-7xl mx-auto px-4 py-6 space-y-5">
         {!selectedSkip ? (
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 sm:gap-6">
@@ -65,9 +67,7 @@ const SelectedSkipBar = () => {
 
                 <div className="text-white flex items-center gap-2 flex-wrap text-xl sm:text-2xl font-bold">
                   <span>£{totalPrice.toFixed(2)}</span>
-                  <span className="text-sm sm:text-base text-gray-400">
-                    for {selectedSkip.hire_period_days} days
-                  </span>
+
                   <button
                     onClick={() => setShowPriceBreakdown(!showPriceBreakdown)}
                     className="text-blue-400 hover:text-blue-300 ml-1"
@@ -95,7 +95,9 @@ const SelectedSkipBar = () => {
                 <div className="flex items-center gap-2 bg-gray-800/50 rounded-2xl px-3 py-2 text-sm text-gray-300 backdrop-blur-sm">
                   <MapPin size={14} className="text-blue-400" />
                   <span>
-                    {selectedSkip.area}, {selectedSkip.postcode}
+                    {[selectedSkip.area, selectedSkip.postcode]
+                      .filter(Boolean)
+                      .join(", ")}
                   </span>
                 </div>
 
@@ -123,7 +125,7 @@ const SelectedSkipBar = () => {
 
             {/* Price Breakdown */}
             {showPriceBreakdown && (
-              <div className="bg-gray-800/50 rounded-lg p-4 backdrop-blur-sm border border-gray-700/50 animate-fadeIn">
+              <div className="bg-gray-800/50 rounded-2xl p-4 backdrop-blur-sm border border-gray-700/50 animate-fadeIn">
                 <h4 className="text-white font-medium mb-2">Price Breakdown</h4>
                 <div className="space-y-2 text-sm">
                   <div className="flex justify-between text-gray-300">
