@@ -17,7 +17,7 @@ const ErrorMessage = ({ heading, description, retry }: Props) => {
         {retry && (
           <button
             onClick={retry}
-            className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200 flex items-center gap-2 mx-auto"
+            className="mt-5 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200 flex items-center gap-2 mx-auto"
           >
             <RefreshCw size={16} />
             Try Again

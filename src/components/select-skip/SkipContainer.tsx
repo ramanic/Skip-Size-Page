@@ -1,11 +1,10 @@
 import React, { useEffect } from "react";
 import { useQuery } from "@tanstack/react-query";
-import { useSkipStore } from "../../stores/skipStore";
 import { fetchSkipsByLocation } from "../../services/skipService";
 import SkipCard from "./SkipCard";
-import LoadingSpinner from "../common/LoadingSpinner";
 import SelectedSkipBar from "./SelectedSkipBar";
 import ErrorMessage from "../common/ErrorMessage";
+import SkipPlaceholder from "./SkipPlaceholder";
 
 const SkipContainer: React.FC = () => {
   const {
@@ -20,10 +19,6 @@ const SkipContainer: React.FC = () => {
     retry: 3,
   });
 
-  if (isLoading) {
-    return <LoadingSpinner />;
-  }
-
   if (error)
     return (
       <ErrorMessage
@@ -36,7 +31,7 @@ const SkipContainer: React.FC = () => {
         retry={refetch}
       />
     );
-  if (skips.length === 0)
+  if (!isLoading && skips.length === 0)
     return (
       <ErrorMessage
         heading="No Skips Available"
@@ -55,7 +50,10 @@ const SkipContainer: React.FC = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 px-4">
+      <div
+        className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 px-4 pb-52 sm:pb-20 `}
+      >
+        {isLoading && <SkipPlaceholder />}
         {skips.map((skip) => (
           <SkipCard key={skip.id} skip={skip} />
         ))}

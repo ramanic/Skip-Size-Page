@@ -1,6 +1,6 @@
 import React from "react";
-import ProgressIndicator from "../components/common/ProgressIndicator";
 import SkipContainer from "../components/select-skip/SkipContainer";
+import ProgressIndicator from "@/components/layout/ProgressIndicator";
 
 const Index: React.FC = () => {
   return (

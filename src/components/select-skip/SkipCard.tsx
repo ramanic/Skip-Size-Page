@@ -35,7 +35,7 @@ const SkipCard: React.FC<SkipCardProps> = ({ skip }) => {
 
   return (
     <div
-      className={`group relative bg-gradient-to-b from-gray-900 to-gray-950 rounded-2xl border-2 overflow-hidden shadow-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-xl cursor-pointer flex flex-col will-change-transform ${
+      className={`group relative bg-gradient-to-b from-gray-700 to-gray-950 rounded-2xl border-2 overflow-hidden shadow-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-xl cursor-pointer flex flex-col will-change-transform ${
         isSelected
           ? "border-blue-500 shadow-blue-500/30 ring-2 ring-blue-500/20"
           : "border-gray-700 hover:border-gray-600"

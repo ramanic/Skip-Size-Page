@@ -17,7 +17,7 @@ export const FeatureBadge = ({
 }: FeatureBadgeProps) => (
   <div
     className={cn(
-      "flex items-center gap-2 text-sm rounded-lg px-3 py-2 backdrop-blur-sm rounded-2xl",
+      "flex items-center gap-2 text-sm  px-3 py-2 backdrop-blur-sm rounded-2xl",
       isActive
         ? "bg-emerald-500/10 border border-emerald-500/20"
         : "bg-red-500/10 border border-red-500/20"
