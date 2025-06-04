@@ -8,7 +8,7 @@ interface SkipCardProps {
 }
 
 const SkipCard: React.FC<SkipCardProps> = ({ skip }) => {
-  const { selectedSkip, setSelectedSkip } = useSkipStore();
+  const { selectedSkip, setSelectedSkip, resetSelection } = useSkipStore();
   const isSelected = selectedSkip?.id === skip.id;
 
   const totalPrice =
@@ -16,7 +16,11 @@ const SkipCard: React.FC<SkipCardProps> = ({ skip }) => {
   const vatAmount = (skip.price_before_vat * skip.vat) / 100;
 
   const handleSelect = () => {
-    setSelectedSkip(skip);
+    if (selectedSkip?.id === skip.id) {
+      resetSelection();
+    } else {
+      setSelectedSkip(skip);
+    }
   };
 
   const getSkipImageUrl = (size: number) =>
