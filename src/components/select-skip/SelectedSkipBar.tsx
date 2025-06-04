@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useSkipStore } from "@/stores/skipStore";
 import {
   CheckCircle,
@@ -35,6 +35,25 @@ const SelectedSkipBar = () => {
   const handleContinue = () => {
     window.open("https://wewantwaste.co.uk/checkout", "_blank");
   };
+
+  useEffect(() => {
+    function handleResize() {
+      if (window.innerWidth >= 640) {
+        setIsCollapsed(false);
+      } else {
+        setIsCollapsed(true);
+      }
+    }
+
+    // Run once on mount
+    handleResize();
+
+    // Listen to resize event
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup listener on unmount
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50 bg-gray-900 bg-opacity-80 backdrop-blur-xl shadow-2xl shadow-black/25 border-t border-gray-700/50">
