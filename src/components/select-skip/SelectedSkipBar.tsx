@@ -22,15 +22,16 @@ const SelectedSkipBar = () => {
   const vatRate = selectedSkip?.vat || 0;
   const vatAmount = (priceBeforeVat * vatRate) / 100;
   const totalPrice = priceBeforeVat + vatAmount;
-
   const handleBack = () => {
-    resetSelection();
+    window.open("https://wewantwaste.co.uk/", "_blank");
   };
+
   const discard = () => {
     resetSelection();
   };
+
   const handleContinue = () => {
-    console.log("Continuing with skip:", selectedSkip);
+    window.open("https://wewantwaste.co.uk/checkout", "_blank");
   };
 
   return (
