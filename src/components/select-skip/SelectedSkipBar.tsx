@@ -50,6 +50,7 @@ const SelectedSkipBar = () => {
             ? `${selectedSkip.size} Yard Skip Selected`
             : "No Skip Selected"}
         </div>
+
         <div className="text-blue-400">
           {isCollapsed ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
         </div>
@@ -59,7 +60,7 @@ const SelectedSkipBar = () => {
       {(!isCollapsed || window.innerWidth >= 640) && (
         <div
           id="skipbar-content"
-          className="max-w-7xl mx-auto px-4 py-6 space-y-5 sm:block"
+          className="max-w-7xl mx-auto px-4 py-6 space-y-2 sm:block"
         >
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 flex-wrap">
             {/* Left side: Title or Price */}
@@ -163,7 +164,7 @@ const SelectedSkipBar = () => {
               </div>
             </div>
           )}
-          <p className="text-gray-400 text-xs sm:text-base mt-0">
+          <p className="text-gray-400 text-xs sm:text-base pb-1">
             Imagery and information shown throughout this website may not
             reflect the exact shape or size specification, colours may vary,
             options and/or accessories may be featured at additional cost.

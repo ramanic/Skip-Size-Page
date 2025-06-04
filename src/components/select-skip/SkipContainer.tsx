@@ -40,7 +40,7 @@ const SkipContainer: React.FC = () => {
     );
 
   return (
-    <div className="space-y-6 lg:space-y-8 pb-10">
+    <div className="space-y-1 lg:space-y-8 pb-10">
       <div className="text-center px-4">
         <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-2 sm:mb-3">
           Choose Your Skip Size
@@ -51,7 +51,7 @@ const SkipContainer: React.FC = () => {
       </div>
 
       <div
-        className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 px-4 pb-52 sm:pb-20 `}
+        className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 px-4 pb-52 sm:pb-24 `}
       >
         {isLoading && <SkipPlaceholder />}
         {skips.map((skip) => (
