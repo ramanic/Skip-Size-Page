@@ -1,3 +1,38 @@
+
+# Getting Started
+
+1. Clone the Repository
+```
+git clone git@github.com:ramanic/Skip-Size-Page.git
+cd Skip-Size-Page
+```
+
+2. Install Dependencies
+
+Using npm:
+```
+npm install
+```
+
+Or using Yarn:
+```
+yarn install
+```
+
+3. Start the Development Server
+
+Using npm:
+```
+npm run dev
+```
+
+Or using Yarn:
+```
+yarn dev
+```
+
+
+
 # 📝 UI/UX Redesign 
 
 The OLD UI is redesigned to make it feel more modern and responsive
