@@ -6,7 +6,7 @@ The OLD UI is redesigned to make it feel more modern and responsive
 
 | New UI                                                                                 | Old UI                                                                                 |
 |----------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|
-| ![New UI](https://github.com/user-attachments/assets/e27698a0-522d-40b4-8200-566a101f4a9b) | ![Old UI](https://github.com/user-attachments/assets/d29c41c3-0120-4335-97e3-ce2669ee16a4) |
+| ![image](https://github.com/user-attachments/assets/296abd33-1b33-4e47-8880-7ef231a02ea0)| ![Old UI](https://github.com/user-attachments/assets/d29c41c3-0120-4335-97e3-ce2669ee16a4) |
 
 **Highlights:**
 - Complete design overhaul with a cleaner and more intuitive layout.
@@ -33,8 +33,8 @@ The OLD UI is redesigned to make it feel more modern and responsive
 
 | New Banner - With Detailed Info & Discard Button                                     | Old Banner                                                                            |
 |--------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|
-| ![New Banner 1](https://github.com/user-attachments/assets/9321c52c-f87e-47a4-8904-eb042ee59d5b)  | ![Old Banner](https://github.com/user-attachments/assets/852c8c07-dd0b-466b-ab44-1526471564a3) |
-| ![New Banner 2](https://github.com/user-attachments/assets/148b02c7-9a17-4c31-8356-7778b18c6e55) |                                                                                        |
+| ![image](https://github.com/user-attachments/assets/d2dcdb04-c2a8-4d0c-920a-f7923d89e9f8)| ![Old Banner](https://github.com/user-attachments/assets/852c8c07-dd0b-466b-ab44-1526471564a3) |
+| ![image](https://github.com/user-attachments/assets/12f3185f-118c-41e2-811f-3c3f9d60547a)|                                                                                        |
 
 **Updates:**
 - Added **price breakdown with VAT** clearly visible.
@@ -48,7 +48,7 @@ The OLD UI is redesigned to make it feel more modern and responsive
 | New Mobile View                                                                     | Old Mobile View                                                                      |
 |-------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------|
 | ![New Mobile 1](https://github.com/user-attachments/assets/3a000170-8680-4191-aad3-6403898e81c2) | ![Old Mobile](https://github.com/user-attachments/assets/470eb6e1-6bbb-4333-a70a-d4d5acf7da82) |
-| ![New Mobile 2](https://github.com/user-attachments/assets/a6da49f6-7efc-46b4-b1b0-f649b7914d2a) |                                                                                       |
+| ![image](https://github.com/user-attachments/assets/7d168015-6e48-4d79-8321-98fa1d101442)|                                                                                       |
 
 **Enhancements:**
 - **Top menu icons only on mobile** – cleaner navigation bar.
