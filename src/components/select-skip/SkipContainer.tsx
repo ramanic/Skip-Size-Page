@@ -51,7 +51,7 @@ const SkipContainer: React.FC = () => {
       </div>
 
       <div
-        className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 px-4 pb-52 sm:pb-24 `}
+        className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 px-4 pb-20 sm:pb-4 `}
       >
         {isLoading && <SkipPlaceholder />}
         {skips.map((skip) => (
