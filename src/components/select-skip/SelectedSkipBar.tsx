@@ -118,7 +118,7 @@ const SelectedSkipBar = () => {
               )}
             </div>
 
-            {/* Metadata badges - more compact */}
+            {/* Metadata badges  */}
             {selectedSkip && (
               <div className="flex flex-wrap gap-2 text-xs">
                 <div className="flex items-center gap-1.5 bg-gray-800/50 rounded-lg px-2.5 py-1.5 text-gray-300 backdrop-blur-sm">
@@ -146,7 +146,7 @@ const SelectedSkipBar = () => {
                   ) : (
                     <X size={12} className="text-red-400" />
                   )}
-                  <span>Road</span>
+                  <span>On Road</span>
                 </div>
 
                 <div
@@ -167,7 +167,7 @@ const SelectedSkipBar = () => {
             )}
           </div>
 
-          {/* Price Breakdown - more compact */}
+          {/* Price Breakdown  */}
           {selectedSkip && showPriceBreakdown && (
             <div className="bg-gray-800/50 rounded-2xl p-3 backdrop-blur-sm border border-gray-700/50 animate-fadeIn">
               <h4 className="text-white font-medium mb-2 text-sm">
@@ -197,13 +197,13 @@ const SelectedSkipBar = () => {
           )}
 
           {/* Disclaimer and CTA Buttons in one row */}
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pt-2 border-t border-gray-700/50">
+          <div className="flex flex-col  sm:flex-row sm:items-center justify-between gap-2 pt-2 border-t border-gray-700/50">
             <p className="text-gray-400 text-xs flex-1 min-w-0">
               Imagery and information shown may not reflect exact
               specifications. Colors may vary.
             </p>
 
-            <div className="flex flex-row gap-2 shrink-0">
+            <div className="flex flex-row gap-2 shrink-0 justify-between">
               <Button
                 variant="ghost"
                 onClick={handleBack}
@@ -211,20 +211,20 @@ const SelectedSkipBar = () => {
               >
                 <ArrowLeft className="mr-1 h-3 w-3" /> Back
               </Button>
+              <div className="flex gap-2">
+                <Button
+                  disabled={!selectedSkip}
+                  onClick={discard}
+                  className="flex items-center gap-1.5 rounded-2xl border border-gray-700 px-3 py-1.5 text-xs text-gray-400 hover:text-red-400 hover:border-red-400 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 hover:shadow-lg hover:scale-[1.02] h-auto"
+                >
+                  <Trash2 size={12} className="shrink-0" />
+                  Discard
+                </Button>
 
-              <Button
-                disabled={!selectedSkip}
-                onClick={discard}
-                className="flex items-center gap-1.5 rounded-2xl border border-gray-700 px-3 py-1.5 text-xs text-gray-400 hover:text-red-400 hover:border-red-400 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 hover:shadow-lg hover:scale-[1.02] h-auto"
-              >
-                <Trash2 size={12} className="shrink-0" />
-                Discard
-              </Button>
-
-              <Button
-                onClick={handleContinue}
-                disabled={!selectedSkip}
-                className={`
+                <Button
+                  onClick={handleContinue}
+                  disabled={!selectedSkip}
+                  className={`
                 text-xs py-2 px-4 rounded-2xl transition-all duration-200 h-auto
                 ${
                   !selectedSkip
@@ -232,9 +232,10 @@ const SelectedSkipBar = () => {
                     : "bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold shadow-lg shadow-blue-500/25 hover:shadow-xl hover:scale-[1.02]"
                 }
               `}
-              >
-                Continue <ArrowRight className="ml-1 h-3 w-3" />
-              </Button>
+                >
+                  Continue <ArrowRight className="ml-1 h-3 w-3" />
+                </Button>
+              </div>
             </div>
           </div>
         </div>
